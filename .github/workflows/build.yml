@@ -11,7 +11,7 @@ on:
 env:
   MAJOR: 1
   MINOR: 2
-  PATCH: 0   # c for main, bump manually when starting new dev cycle
+  PATCH: 2   # c for main, bump manually when starting new dev cycle
 
 jobs:
   build:
