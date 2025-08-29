@@ -81,6 +81,9 @@ jobs:
       - name: Publish app
         run: dotnet publish -c Release -o ./publish /p:Version=${VERSION}
 
+      - name: zip files
+        run: zip -r myapp.zip ./publish
+
       - name: Display structure of downloaded files
         run: ls -R
 
@@ -88,7 +91,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: myapp-${{ env.VERSION }}
-          
           path: ./publish/
 
   release:
