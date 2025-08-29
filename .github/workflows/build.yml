@@ -91,7 +91,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: myapp-${{ env.VERSION }}
-          path: ./publish/
+          path: myapp.zip
 
   release:
     needs: build
